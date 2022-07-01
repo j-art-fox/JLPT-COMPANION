@@ -2,8 +2,8 @@
     font-family: 'Inter', sans-serif;
 }
 main{
-    position:relative;
-    display:flex;
+    position: relative;
+    display: flex;
     align-items: center;
     justify-content: center;
     
@@ -12,34 +12,46 @@ button{
    margin: 16px;
 }
 .card{
+    display:flex;
     position:relative;
     border-radius:16px;
     margin:32px;
     border: 3px solid grey;
     height: 600px;
     width: 400px;
+    min-width: 400px;
   }
 .card-header{
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width:400px;
-    top:4px;
+    width: 400px;
+    top: 0px;
     border-bottom: 3px dashed grey;
     background-color: rgb(242, 242, 242);
     border-radius: 16px 16px 0 0;
+    position: absolute;
 }
 
 .card-header h2{  
 
 }
-
-.card-footer{
-    display:flex;
+.card-body{
+    display: flex;
+    position: relative;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:400px;
-    bottom:1px;
+    margin: auto;
+}
+
+.card-footer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    bottom: 0px;
     border-top: 3px dashed grey;
     background-color: rgb(242, 242, 242);
     border-radius: 0 0 16px 16px;
@@ -51,14 +63,3 @@ button{
     font-size: 5em;
 }
 
-.card-body{
-    display:flex;
-    position:relative;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
