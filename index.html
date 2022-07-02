@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +8,87 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>JLPT COMPANION </title>
 </head>
+
 <body>
     <header>
+        <h1>JLPT COMPANION</h1>
+        <div id="nav-container">
+            <nav id="main-nav">
+                <div id="nav-icon"></div>
+                <ul>
+                    <li class="items"><a href="">Home</a></li>
+                    <li class="items"><a href="">Level</a></li>
+                    <li class="items"><a href="">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="timer">
+            <p>Time Remaining: 00:00:00</p>
+        </div>
     </header>
     <main>
+        <div class="left-aside">
+            <h2>Level<br>N5</h2>
+            <div class="buttons">
+                <button>漢字<br>Kanji</button>
+                <button>文法<br>Grammar</button>
+                <button>読解<br>Reading</button>
+                <button>語彙<br>Vocabulary</button>
+            </div>
+        </div>
         <div class="card">
             <div class="card-header">
-                <h2>JLPT N5　KANJI</h2>
+                <h2>TEST TITLE</h2>　
+                <h2>TEST SECTION</h2>
+
             </div>
             <div class="card-body">
-                <p class="kanji">漢字</p>
+                <div class="problem-directions">
+                    <h4>Directions: </h4>
+                    <p><span id="specific-directions"> This is how you solve this problem.</span></p>
+                </div>
+                <div class="problem-content">
+                    <p class="kanji">漢字</p>
+                </div>
+                <div class="possible-answers">
+                    <div class="possible-answer"><a href="">1. <span>possible answer</span></a></div>
+                    <div class="possible-answer"><a href="">2. <span>possible answer</span></a></div>
+                    <div class="possible-answer"><a href="">3. <span>possible answer</span></a></div>
+                    <div class="possible-answer"><a href="">4. <span>possible answer</span></a></div>
+                    </ul>
+                </div>
             </div>
             <div class="card-footer">
-                <h2>JLPT N5　KANJI</h2>
+                <button>⇦ Previous</button>
+                <h2>Submit</h2>
+                <button>Next ⇨</button>
+            </div>
+        </div>
+        <div class="right-aside">
+            <div class="problems-remaining">
+                <h2>Problems Remaining</h2>
+                <p>##/##</p>
+            </div>
+            <h2>Settings</h2>
+            <div class="buttons">
+                <button>Timer On</button>
+                <button>Display Furigana</button>
+                <button>Timer Duration</button>
+                <button>Dark Mode</button>
+                <button>Level Select</button>
             </div>
         </div>
     </main>
     <footer>
     </footer>
-    
+
     <script src="/assets/script/script.js"></script>
 </body>
+
 </html>
