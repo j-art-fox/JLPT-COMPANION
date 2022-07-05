@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
+    <script defer src="/assets/script/script.js"></script>
     <title>JLPT COMPANION </title>
 </head>
 
@@ -43,31 +44,35 @@
             </div>
         </div>
         <div class="card">
-            <div class="card-header">
-                <h2>TEST TITLE</h2>　
-                <h2>TEST SECTION</h2>
-
+            <div class="start">
+                <button class="start-btn"> Begin Quiz
+                </button>
             </div>
-            <div class="card-body">
-                <div class="problem-directions">
-                    <h4>Directions: </h4>
-                    <p><span id="specific-directions"> This is how you solve this problem.</span></p>
+            <div class="card-contents">
+                <div class="card-header">
+                    <h2>TEST TITLE</h2>
+                    <h2>TEST SECTION</h2>
                 </div>
-                <div class="problem-content">
-                    <p class="kanji">漢字</p>
+                <div class="card-body">
+                    <div class="problem-directions">
+                        <p>Directions: <span id="specific-directions"> This is how you solve this problem.</span></p>
+                    </div>
+                    <div class="problem-content">
+                        <p id="question-text">漢字</p>
+                    </div>
+                    <div class="possible-answers">
+                        <div class="possible-answer"><a href="">1. <span id="potentSolu1">possible answer</span></a></div>
+                        <div class="possible-answer"><a href="">2. <span id="potentSolu2">possible answer</span></a></div>
+                        <div class="possible-answer"><a href="">3. <span id="potentSolu3">possible answer</span></a></div>
+                        <div class="possible-answer"><a href="">4. <span id="potentSolu4">possible answer</span></a></div>
+                        
+                    </div>
                 </div>
-                <div class="possible-answers">
-                    <div class="possible-answer"><a href="">1. <span>possible answer</span></a></div>
-                    <div class="possible-answer"><a href="">2. <span>possible answer</span></a></div>
-                    <div class="possible-answer"><a href="">3. <span>possible answer</span></a></div>
-                    <div class="possible-answer"><a href="">4. <span>possible answer</span></a></div>
-                    </ul>
+                <div class="card-footer">
+                    <button>⇦ Previous</button>
+                    <h2>Submit</h2>
+                    <button>Next ⇨</button>
                 </div>
-            </div>
-            <div class="card-footer">
-                <button>⇦ Previous</button>
-                <h2>Submit</h2>
-                <button>Next ⇨</button>
             </div>
         </div>
         <div class="right-aside">
@@ -88,7 +93,7 @@
     <footer>
     </footer>
 
-    <script src="/assets/script/script.js"></script>
+   
 </body>
 
 </html>

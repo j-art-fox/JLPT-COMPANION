@@ -1,5 +1,10 @@
 * {
     font-family: 'Inter', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+:root{
+    --lightgrey:rgb(242, 242, 242);
 }
 
 header {
@@ -34,7 +39,7 @@ ul {
 .items {
     flex: 1 0 100px;
     margin: 2px;
-    background-color: rgb(242, 242, 242);
+    background-color: var(--lightgrey);
     list-style: none;
     text-align: center;
 }
@@ -65,17 +70,33 @@ main {
     margin: auto;
 }
 
+.start{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.start-btn{
+    font-size: 1.5rem;
+    padding:16px;
+    border-radius: 8px;
+    border-color: grey;
+}
+
 .left-aside {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 300px;
     /* position: relative; */
 }
 
 .left-aside button,
 .right-aside button {
     margin: 16px 0px 16px 0px;
+    border-radius: 8px;
+    border-color: rgb(212, 212, 212);
 }
 
 .left-aside,
@@ -91,6 +112,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 300px;
 }
 
 .problems-remaining {
@@ -115,10 +137,18 @@ h2 {
     position: relative;
     border-radius: 16px;
     margin: 32px;
-    border: 3px solid grey;
     height: 600px;
     width: 800px;
     min-width: 400px;
+    box-shadow: 0 0 5px 2px;
+    align-items: center;
+    justify-content: center;
+}
+.card-contents{
+    display:none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-header {
@@ -134,34 +164,31 @@ h2 {
 }
 
 .problem-directions{
-    display:flex;
-    align-items: baseline;
-    justify-content: baseline;
     font-size: larger;
+    margin:16px;
 }
-
+.problem-content{
+    margin:-30px;
+}
 .card-header h2 {}
 
 .card-body {
     display: flex;
-    position: relative;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
-    margin: auto;
 }
 
 .possible-answers{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    max-height: 64px;
-    flex-wrap: wrap;
-
+    transform: translate(-10px);
+    display:grid;
+    grid-template-columns: repeat(2, auto);
+    gap:8px;
+    margin:16px 0;
+    
 }
 .possible-answer{
-    flex: auto;
+    flex: 1 0 250px;
     padding:8px;
     margin: 8px;
     border: 1px grey solid;
@@ -171,6 +198,12 @@ h2 {
 .possible-answer a{
    text-decoration: none;
 }
+
+.possible-answer:hover{
+    box-shadow:  0px 0px 10px 5px rgb(201, 201, 201);
+    transition: ease-in-out 200ms;
+}
+
 .card-footer {
     position: absolute;
     display: flex;
@@ -195,8 +228,10 @@ h2 {
     text-transform: uppercase;
 }
 
-
-.kanji {
+.hide{
+    display:none;
+}
+#question-text {
     flex-wrap: wrap;
     font-family: 'Zen Maru Gothic', sans-serif;
     font-size: 5em;
